@@ -14,35 +14,35 @@ document.addEventListener('DOMContentLoaded', startGame)
 //At least one of those cells is not an object! { }
 
 var board={
-    cells: [ {row:0,col:0,value:0,isMine:false,isMarked:false,hidden:true},
-             {row:0,col:1,value:0,isMine:true,isMarked:false,hidden:true},
-             {row:0,col:2,value:0,isMine:false,isMarked:false,hidden:true},
-             {row:0,col:3,value:0,isMine:false,isMarked:false,hidden:true},
-             {row:0,col:4,value:0,isMine:false,isMarked:false,hidden:true},
+    cells: [ {row:0,col:0,value:-1,isMine:false,isMarked:false,hidden:true},
+             {row:0,col:1,value:-1,isMine:true,isMarked:false,hidden:true},
+             {row:0,col:2,value:-1,isMine:false,isMarked:false,hidden:true},
+             {row:0,col:3,value:-1,isMine:false,isMarked:false,hidden:true},
+            // {row:0,col:4,value:0,isMine:false,isMarked:false,hidden:true},
 
              {row:1,col:0,value:1,isMine:true,isMarked:false,hidden:true},
              {row:1,col:1,value:2,isMine:false,isMarked:false,hidden:true},
              {row:1,col:2,value:3,isMine:true,isMarked:false,hidden:true},
-             {row:1,col:3,value:1,isMine:false,isMarked:false,hidden:true},
-             {row:1,col:4,value:0,isMine:false,isMarked:false,hidden:true},
+             {row:1,col:3,value:-1,isMine:false,isMarked:false,hidden:true},
+            // {row:1,col:4,value:0,isMine:false,isMarked:false,hidden:true},
 
              {row:2,col:0,value:4,isMine:false,isMarked:false,hidden:true},
              {row:2,col:1,value:5,isMine:true,isMarked:false,hidden:true},
              {row:2,col:2,value:6,isMine:false,isMarked:false,hidden:true},
-             {row:2,col:3,value:1,isMine:false,isMarked:false,hidden:true},
-             {row:2,col:4,value:1,isMine:false,isMarked:false,hidden:true},
+             {row:2,col:3,value:-1,isMine:false,isMarked:false,hidden:true},
+           //  {row:2,col:4,value:1,isMine:false,isMarked:false,hidden:true},
 
              {row:3,col:0,value:7,isMine:false,isMarked:false,hidden:true},
              {row:3,col:1,value:8,isMine:true,isMarked:false,hidden:true},
              {row:3,col:2,value:9,isMine:false,isMarked:false,hidden:true},
-             {row:3,col:3,value:1,isMine:false,isMarked:false,hidden:true},
-             {row:3,col:4,value:1,isMine:false,isMarked:false,hidden:true},
+             {row:3,col:3,value:-1,isMine:false,isMarked:false,hidden:true},
+          //   {row:3,col:4,value:1,isMine:false,isMarked:false,hidden:true},
 
-             {row:4,col:0,value:1,isMine:false,isMarked:false,hidden:true},
+             {row:4,col:0,value:-1,isMine:false,isMarked:false,hidden:true},
              {row:4,col:1,value:0,isMine:true,isMarked:false,hidden:true},
-             {row:4,col:2,value:1,isMine:false,isMarked:false,hidden:true},
-             {row:4,col:3,value:1,isMine:false,isMarked:false,hidden:true},
-             {row:4,col:4,value:1,isMine:false,isMarked:false,hidden:true},
+             {row:4,col:2,value:-1,isMine:false,isMarked:false,hidden:true},
+             {row:4,col:3,value:-1,isMine:false,isMarked:false,hidden:true},
+           //  {row:4,col:4,value:1,isMine:false,isMarked:false,hidden:true},
 
     ] 
 
