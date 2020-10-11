@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
-//var audio=document.getElementsByTagName('audio')[0];
+var butID=document.getElementById('butId').onclick=function(){
+      console.log(lib.formulorItems);
+
+};
+
 
 //audio.play();
+
 
 
 
@@ -40,149 +45,108 @@ var board={
 
              {row:4,col:0,value:-6,isMine:false,isMarked:false,hidden:true},
              {row:4,col:1,value:0,isMine:true,isMarked:false,hidden:true},
-             {row:4,col:2,value:-7,isMine:false,isMarked:false,hidden:true},
+             {row:4,col:2,value:10,isMine:false,isMarked:false,hidden:true},
              {row:4,col:3,value:-5,isMine:false,isMarked:false,hidden:true},
            //  {row:4,col:4,value:1,isMine:false,isMarked:false,hidden:true},
 
-    ] 
+    ] ,
+    calculate:calculate
 
-    //checkForWin:checkForWin
 }
-
-/*var board={cells:[],
-
-          setBoard:setBoard,
-          reset:reset
-          };*/
-                
-//board.setBoard();
-
-/*function setBoard(){
-
-          for (var r=0;r<6;r++){
-                
-            for(var c=0;c<6;c++){
-              
-                var cell={};
-
-                cell.row=r;
-                cell.col=c;
-                cell.isMarked=false;
-                cell.hidden=true;
-              
-                board.cells.push(cell);
-
-            }
-        }
-        for(var i=0;i<36;i++){
-           
-          
-          if(i==3||i==8||i==12||i==23){
-          board.cells[i].isMine=true;
-          }
-
-          else {
-            board.cells[i].isMine=false;
-        }
-        }
-
-}*/
 
 
    
 
 function startGame () {
-  // Don't remove this function call: it makes the game work!
-  //board.cells.forEach(function(cell){
-    //var surroundingCells = lib.getSurroundingCells(cell.row, cell.col);
-    
-    //cell.surroundingMines=countSurroundingMines(surroundingCells);
-  
-  //});
-
-  //document.addEventListener('click',checkForWin);
-  //document.addEventListener('contextmenu',checkForWin);
+ 
 
   lib.initBoard()
 
  
 }
-
-function reset(){
-
-  //window.onload = function(){
-     // board={};
-      board.cells=[];  
-
-      setBoard();
-
-      // lib.initBoard();
-
-       //javascript:history.go(0);
-       window.history.go(0);
-      
- // }
-     //document.addEventListener('DOMContentLoaded',lib.initBoard);
-}
+var result;
+var operator;
+var isOperator=false;
+var numberStr='';
 
 
-
-// Define this function to look for a win condition:
-//
-// 1. Are all of the cells that are NOT mines visible?
-// 2. Are all of the mines marked?
-board.checkForWin=function () {
-
-  // You can use this function call to declare a winner (once you've
-  // detected that they've won, that is!)'
-  //   lib.displayMessage('You win!')
-    
-
-  let notMarkedMine=board.cells.find(cell =>{
-         
-       return cell.isMine==true&&cell.isMarked==false ;
-     
-      
-  });
-
-  let neverClickedCell=board.cells.find(cell =>{
-
-      return cell.hidden==true&&cell.isMarked==false 
-
- });
+function calculate(){
 
 
-  
- 
-  if(notMarkedMine==undefined&&neverClickedCell==undefined 
-     ){
-    
-    lib.displayMessage('You win!')
+    for(var i=0;i<lib.formulorItems.length;i++){
 
-    
-  }
-}
+       
+      if(lib.formulorItems[i]>=0 ){
+          numberStr=numberStr+lib.formulorItems[i].toString();
+          console.log(numberStr);
 
-// Define this function to count the number of mines around the cell
-// (there could be as many as 8). You don't have to get the surrounding
-// cells yourself! Just use `lib.getSurroundingCells`: 
-//
-
-  
-// It will return cell objects in an array. You should loop through 
-// them, counting the number of times `cell.isMine` is true.
-
-/*function countSurroundingMines (cells) {
-        let arr=cells.filter(cell =>{
-
-          return cell.isMine==true;
-      });
-
-      if(arr.length<=8){
-        return arr.length; 
       }
-      else{
-        return 0;
-      }
-   }*/
+    }
+   /*   else if(cell.value==-3)
+        {
+          //node.innerHTML='-'
+          operator='-';
+          lib.formulorItems.push('-');
+        
+
+        }
+      else if(cell.value==-4)
+        {
+          //node.innerHTML='+'
+          lib.formulorItems.push('+');
+          operator='+';
+
+        }
+      else if(cell.value==-5)
+        {
+          //formulorItems.push('=');
+          console.log(formulorItems);
+        
+        
+        // node.innerHTML='='
+        }
+      else if(cell.value==-6)
+        {
+        // node.innerHTML='+/-'
+          //sformulorItems.push('');
+
+        }
+      else if(cell.value==-7)
+        {
+          lib.formulorItems.push('.');
+
+        // node.innerHTML='.'
+        operator='.';
+        }
+        else if(cell.value== -8)
+        {
+          //formulorItems.push('');
+
+        // node.innerHTML='%'
+        
+        }
+      else if(cell.value==-9)
+        {
+          lib.formulorItems=[];
+
+
+        // node.innerHTML='CE'}
+        }
+      else if(cell.value==-10)
+        {
+          lib.formulorItems=[];
+
+        // node.innerHTML='C'
+        
+        }  */
+
+
+
+ }
+
+
+
+
+
+
 
