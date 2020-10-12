@@ -65,8 +65,7 @@ function startGame () {
  
 }
 var result;
-var operator;
-var isOperator=false;
+var operators=[];
 var numberStr='';
 
 
@@ -80,6 +79,11 @@ function calculate(){
           numberStr=numberStr+lib.formulorItems[i].toString();
           console.log(numberStr);
 
+      }
+
+      else if(lib.formulorItems[i]<0){
+
+           operators.push(lib.formulorItems[i]);
       }
     }
    /*   else if(cell.value==-3)
